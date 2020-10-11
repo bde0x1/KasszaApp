@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25px">
+
+            <TableLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ed8408"
+                    android:padding="30px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kassza adatok:"
+                        android:textSize="50px"
+                        android:gravity="center"/>
+
+                </TableRow>
+                 <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Blokkon lévő bevétel:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:id="@+id/billBalance"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Kassza tényleges tartalma:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:id="@+id/finallyBalance"/>
+
+                </TableRow>
+                 <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Kasszából kivehető jövedelem:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:id="@+id/income"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#150"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Borravaló:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#520"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Hiány:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/miss"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Kassza tartalma minden nélkül:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/changingCash"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ed8408"
+                    android:padding="30px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kassza tényleges bevételkéhez vegyél ki:"
+                        android:textSize="30px"
+                        android:gravity="center"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out20000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out10000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out5000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="2000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out2000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="1000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out1000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="500 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out500"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="200 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out200"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="100 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out100"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="50 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out50"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out20"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out10"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out5"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ed8408"
+                    android:padding="30px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="A borravalódhoz vegyél ki:"
+                        android:textSize="30px"
+                        android:gravity="center"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out20000tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out10000tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out5000tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="2000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out2000tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="1000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out1000tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="500 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out500tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="200 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out200tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="100 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out100tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="50 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out50tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out20tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out10tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/out5tip"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ed8408"
+                    android:padding="30px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kasszában maradt váltó:"
+                        android:textSize="30px"
+                        android:gravity="center"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in20000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in10000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in5000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="2000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in2000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="1000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in1000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="500 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in500"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="200 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in200"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="100 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in100"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="50 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in50"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in20"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in10"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/in5"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ed8408"
+                    android:padding="30px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bevétel + váltó a borravaló nélkül:"
+                        android:textSize="30px"
+                        android:gravity="center"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic20000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic10000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic5000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="2000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic2000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="1000 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic1000"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="500 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic500"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="200 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic200"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="100 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic100"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="50 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic50"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="20 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic20"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="10 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic10"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#255"
+                    android:padding="10px">
+                    
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="5 Ft-ból:"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10px"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:id="@+id/ic5"/>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    
+    </ScrollView>
+
+</LinearLayout>
