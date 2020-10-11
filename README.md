@@ -7,8 +7,11 @@ Ez az app 2 Activity-vel rendelkezik
 1.:
 
   adatok felvétele:
+  
   nyitáskor a kasszában lévő váltó. Default 20000 Ft
+  
   záró egyenleg(nem a kártyás)
+  
   címletek darabszámának a bekérése
 
   számol gomb hatására másik Activity megjelenik
