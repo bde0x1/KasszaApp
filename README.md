@@ -4,6 +4,7 @@ c#, Xamarin, Android
 <hr>
 Ez az app 2 Activity-vel rendelkezik
 
+
 1.:
 
   adatok felvétele:
@@ -19,14 +20,23 @@ Ez az app 2 Activity-vel rendelkezik
 2.:
 
   kiírja a végösszeget(amit megadtunk)
+  
   kiírja a tényleges tartalmat
+  
   kiírja a hiányt
+  
   kiírja a borravalót
+  
   a kasszából mennyit kell kivenni(jövedelem)
+  
   a kasszában mennyi marad (váltó)
+  
   kivételhez mit vegyél ki(legnagyobb címletekkel)db
+  
   borravalóhoz mit vegyél ki (legnagyobb címletekkel)db
+  
   kasszában maradt váltó db
+  
   a füzetbe irando db számok (jövedelem, váltó) borravaló nélkül
   
 
